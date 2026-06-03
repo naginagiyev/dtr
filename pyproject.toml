@@ -9,6 +9,9 @@ description = "Dynamic Text Compiler"
 readme = "README.md"
 requires-python = ">=3.8"
 license = { text = "MIT" }
+authors = [
+    { name = "Naghi Naghiyev", email = "naginagiyev03@gmail.com" },
+]
 classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Rust",
