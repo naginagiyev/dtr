@@ -1,0 +1,13 @@
+/target/
+/dist/
+*.egg-info/
+__pycache__/
+*.pyc
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+*.whl
+*.pyd
+*.so
+*.dylib
+python/dtc/_dtc.*
