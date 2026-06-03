@@ -1,11 +1,11 @@
-![DTR banner](https://github.com/naginagiyev/dtr/blob/main/assets/banner.png)
+![DTR banner](https://raw.githubusercontent.com/naginagiyev/dtr/main/assets/banner.png)
 
 # DTR — Dynamic Text Renderer
 
 **DTR** is a Python library built in Rust ([PyO3](https://pyo3.rs/)) for rendering template strings with custom function calls, file includes, and variables. Use it to generate dynamic text from templates while keeping logic in Python.
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/naginagiyev/dtr/blob/main/LICENSE)
 [![Rust](https://img.shields.io/badge/rust-powered-orange.svg)](https://www.rust-lang.org/)
 
 ## Features
@@ -161,7 +161,7 @@ Use `maturin publish --repository testpypi` to test on [TestPyPI](https://test.p
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT — see [LICENSE](https://github.com/naginagiyev/dtr/blob/main/LICENSE).
 
 ## Links
 
