@@ -1,13 +1,13 @@
 [package]
-name = "dtc"
+name = "dtrlib"
 version = "0.1.0"
 edition = "2021"
-description = "Dynamic Text Compiler"
+description = "Dynamic Text Renderer"
 authors = ["Naghi Naghiyev <naginagiyev03@gmail.com>"]
 license = "MIT"
 
 [lib]
-name = "dtc"
+name = "dtrlib"
 crate-type = ["cdylib"]
 
 [dependencies]

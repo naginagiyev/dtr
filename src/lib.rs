@@ -9,20 +9,20 @@ use syntax::CompilerSyntax;
 use textcompiler::{DynamicValue, TextCompiler};
 
 #[pymodule]
-fn _dtc(_py: Python, m: &PyModule) -> PyResult<()> {
-    m.add_class::<PyTextCompiler>()?;
-    m.add_class::<PyCompilerSyntax>()?;
+fn _dtr(_py: Python, m: &PyModule) -> PyResult<()> {
+    m.add_class::<PyCompiler>()?;
+    m.add_class::<PySyntax>()?;
     Ok(())
 }
 
-#[pyclass(name = "CompilerSyntax")]
+#[pyclass(name = "Syntax")]
 #[derive(Clone)]
-struct PyCompilerSyntax {
+struct PySyntax {
     inner: CompilerSyntax,
 }
 
 #[pymethods]
-impl PyCompilerSyntax {
+impl PySyntax {
     #[new]
     #[pyo3(signature = (
         function_prefix=None,
@@ -58,16 +58,16 @@ impl PyCompilerSyntax {
     }
 }
 
-#[pyclass(name = "TextCompiler")]
-struct PyTextCompiler {
+#[pyclass(name = "Compiler")]
+struct PyCompiler {
     inner: TextCompiler,
 }
 
 #[pymethods]
-impl PyTextCompiler {
+impl PyCompiler {
     #[new]
     #[pyo3(signature = (syntax=None))]
-    fn new(syntax: Option<PyCompilerSyntax>) -> Self {
+    fn new(syntax: Option<PySyntax>) -> Self {
         let syntax = syntax.map(|value| value.inner);
         Self {
             inner: TextCompiler::new(syntax),

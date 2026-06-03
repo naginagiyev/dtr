@@ -10,4 +10,3 @@ __pycache__/
 *.pyd
 *.so
 *.dylib
-python/dtc/_dtc.*
