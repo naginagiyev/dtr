@@ -1,4 +1,4 @@
-![DTC banner](assets/banner.jpg)
+![DTC banner](assets/banner.png)
 
 # DTC — Dynamic Text Compiler
 
