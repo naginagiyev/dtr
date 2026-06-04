@@ -1,6 +1,6 @@
 [package]
 name = "dtrlib"
-version = "0.1.2"
+version = "2.0.0"
 edition = "2021"
 description = "Dynamic Text Renderer"
 authors = ["Naghi Naghiyev <naginagiyev03@gmail.com>"]
@@ -11,5 +11,5 @@ name = "dtrlib"
 crate-type = ["cdylib"]
 
 [dependencies]
-pyo3 = { version = "0.20.0", features = ["extension-module"] }
+pyo3 = { version = "0.21", features = ["extension-module"] }
 regex = "1"

@@ -79,6 +79,22 @@ print(compiler.compile("~fn:text.upper('hello')"))
 
 Arguments support strings, numbers, booleans, lists, and dicts. Empty arguments become `null`.
 
+### Register a Python file as a module
+
+Load a `.py` file and expose its top-level `def` functions under a namespace:
+
+```python
+compiler = Compiler()
+
+compiler.add_module("random_number_generator.py", "generator")
+print(compiler.compile("~fn:generator.roll(6)"))
+```
+
+- **`module_path`**: path to the `.py` file (relative to the current working directory or absolute).
+- **`as_name`**: namespace used in templates (`generator.func`, not the filename).
+
+Only module-level functions are registered; names starting with `_` are skipped. Classes, variables, and other attributes are ignored. Re-registering the same namespace overwrites previous functions for matching names.
+
 ### Variables
 
 Set values with `set_arg`, then reference them inside **function arguments**:
@@ -124,6 +140,7 @@ compiler = Compiler(syntax)
 | `set_arg(name, value)` | Set a variable for use in function arguments. |
 | `clear_args()` | Remove all variables. |
 | `add_function(full_name, callable)` | Register a Python callable; receives a list of parsed argument values. |
+| `add_module(module_path, as_name)` | Load a `.py` file and register its top-level functions as `as_name.function`. |
 
 ### `Syntax`
 
